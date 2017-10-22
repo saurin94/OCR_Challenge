@@ -14,27 +14,10 @@
   <br>
   <br>
   <form action="/image_click_button" method="post">
-    <a href="clicked.html" class="btn btn-default" id='btnSignUp'>Click here</a> 
+    <input type="button" class="btn btn-info" value="Click Image" /> 
+    <input type="button" class="btn btn-info" value="Image Button" /> 
   </form>
-<script>
-$(function() {
-    $('#btnSignUp').click(function() {
- 
-        $.ajax({
-            url: '/image_click_button',
-            data: $('form').serialize(),
-            type: 'POST',
-            success: function(response) {
-                console.log(response);
-            },
-            error: function(error) {
-                console.log(error);
-            }
-        });
-    });
-});
-</script>
+  {{something}}
 </div>
-{{ something }}
 </body>
 </html>
